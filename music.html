@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>ZiemoBlog/home</title>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Ziemowit Andrzejewski"/>
+    <meta name="description" content="Ziemo Andrzejewski official page"/>
+    <meta name="keywords" content="programming,basketball,music"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<style>
+    * {box-sizing: border-box;font-size:1em}
+    body {margin:0;background-color: cornsilk;}
+    header {font-family: "Courier 10 Pitch", Purisa,cursive}
+    header {display:flex;justify-content: space-around;background: linear-gradient(15deg,brown,yellow)}
+    header ul {display:flex;list-style-type: none;}
+    header ul li {margin-right:20px;background: burlywood;border-radius: 20px;}
+    header ul li a {text-decoration: none;}
+    header ul li a:hover {color: yellow}
+    header img {width: 60px;height:60px;}
+
+    @media all and (max-width: 500px) {
+        header {flex-direction: column;}
+        header ul {flex-direction: column;}
+        header ul li {text-align: center}
+    }
+    /*GRID*/
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 70px;
+        grid-template-areas: "nav nav nav" "t1 t2 ." "t3 t3 t3";
+        /*justify-content: center;*/
+        /*align-content: center;*/
+        /*justify-items: center;*/
+        /*align-items: center;*/
+
+    }
+    header {grid-area: nav;border:2px solid black;}
+    .side {grid-area: t1;background-color: cadetblue;border:2px solid black;}
+    .art {grid-area: t2;background-color: cadetblue;border:2px solid black;}
+    .foot {grid-area: t3;background-color: cadetblue;border:2px solid black;}
+    /*.content {border:4px solid red;}*/
+
+</style>
+<body>
+    <header>
+        <img src="images/logoF.png" alt="logo"/>
+        <p>ZiemoBlog</p>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">basket</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+    <div class="side">
+        <h1>Sidebar</h1>
+    </div>
+    <div class="art">
+        <h1>my Art</h1>
+    </div>
+    <div class="foot">
+        <h1>fooooter</h1>
+    </div>
+</body>
+</html>
